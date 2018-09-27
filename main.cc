@@ -38,6 +38,7 @@ int main(int argc, char **argv)
 
     // Output bag
     rosbag::Bag bag_out(argv[4],rosbag::bagmode::Write);
+    bag_out.setCompression(rosbag::compression::Bz2);
 
     ros::Time t = ros::Time::now();
 
